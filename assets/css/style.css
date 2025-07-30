@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+:root {
+    --cor-neutral-10: #0d1117;
+    --cor-neutral-20: #161b22;
+    --cor-neutral-30: #21262d;
+    --cor-neutral-40: #30363d;
+    --cor-neutral-50: #8b949e;
+    --cor-neutral-60: #c9d1d9;
+    --cor-neutral-70: #ffffff;
+
+    --color-link:#58a6ff;
+    --color-button:#238636;
+    --color-button-hover:#2ea043;
+}
+
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    font-size: 12px;
+    color: var(--color-link);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    background-color: var(--cor-neutral-10);
+    color: var(--cor-neutral-60);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    padding: 32px 0px 24px 0px;
+}
+
+#logo {
+    width: 48px;
+    height: 46px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#title {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: var(--cor-neutral-20);
+    border-radius: 6px;
+    padding: 16px;
+    border: 1px solid var(--cor-neutral-30);
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-field div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-field label {
+    font-weight: 400;
+}
+
+#forgot_password:hover {
+    text-decoration: none;
+}
+
+.form-control {
+    all: unset;
+    padding: 5px 12px;
+    line-height: 20px;
+    color: var(--cor-neutral-60);
+    background-color: var(--cor-neutral-10);
+    border: 1px solid var(--cor-neutral-40);
+    border-radius: 6px;
+}
+
+.form-control:focus-visible {
+    border-color: var(--color-link);
+}
+
+.form-control:-webkit-autofil {
+    box-shadow:  inset 0 0 0 32px var(--cor-neutral-10) !important;
+    -webkit-text-fill-color: var(--cor-neutral-60);
+}
+
+#submit-button {
+    background-color: var(--color-button);
+    color: var(--cor-neutral-70);
+    border: 1px solid rgba(240, 246, 252, 0.1);
+    display: inline-block;
+    padding: 5px 16px;
+    font-weight: 500;
+    line-height: 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 80ms;
+}
+
+#submit-button:hover {
+    background-color: var(--color-button-hover);
+}
+
+#login-callout {
+    padding: 16px 44px;
+    border: 1px solid var(--cor-neutral-40);
+    border-radius: 6px;
+}
+
+#login-callout a {
+    font-size: 14px;
+}
+
+footer {
+    padding: 80px;
+}
+
+footer ul {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+}
+
+footer ul li:last-child a {
+    color: var(--cor-neutral-50);
+}
+
+footer ul li:last-child a:hover {
+    color: var(--color-link);
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0 16px;
+  }
+
+  #container {
+    width: 100%;
+  }
+
+  form {
+    padding: 12px;
+  }
+
+  #login-callout {
+    padding: 12px 16px;
+  }
+
+  footer {
+    padding: 40px 0;
+  }
+
+  footer ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  footer ul li {
+    margin-bottom: 8px;
+  }
+}
